@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="action_example">Example action</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="action_forgot_password">Recover lost password</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="action_sign_in_register"><b>Sign in</b> or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="action_websearch">Web search</string>
+    <string name="app_label">App_Label</string>
+    <string name="app_name">Navigation Drawer Example</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="bulb_off">Bulb Off</string>
+    <string name="bulb_on">Bulb On</string>
+    <string name="cutFromLabel">Cut From</string>
+    <string name="cutTill">Cut Till</string>
+    <string name="detailedInfo">DETAILED INFO</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="homepage_table_1">How to use this app</string>
+    <string name="homepage_table_2">Rate this app</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="login_progress_signing_in">Signing in…</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="prompt_address">Address</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="search_hint">Search</string>
+    <string name="title_activity_home_page">HomePage</string>
+    <string name="title_activity_searcheable">SearcheableActivity</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
+    <eat-comment />
+
+    <string name="title_activity_sign_up">Sign Up</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="LoginFormContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+</resources>
