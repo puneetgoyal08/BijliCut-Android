@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.bijlicut2.src.SearcheableActivity" >
+    tools:context="com.example.bijlicut2.src.SearcheableActivity2" >
     
     <item android:id="@+id/action_settings"
         android:title="@string/action_settings"

@@ -1,7 +1,8 @@
 package com.example.bijlicut2.src;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -53,6 +54,7 @@ public class HomePageFragment extends android.app.Fragment {
     // TODO: Rename and change types and number of parameters
     public static HomePageFragment newInstance(String param1) {
         HomePageFragment fragment = new HomePageFragment();
+        fragment.setHasOptionsMenu(true);
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         fragment.setArguments(args);
@@ -81,7 +83,11 @@ public class HomePageFragment extends android.app.Fragment {
         myThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                JSONObject jsonObject = api.getJSONFromUrl("http://10.0.2.2:8888/iReporter/index.php", params);
+//                JSONObject jsonObject = api.getJSONFromUrl("http://10.0.2.2:8888/iReporter/index.php", params);
+//                JSONObject jsonObject = api.getJSONFromUrl("http://172.30.5.106:8888/iReporter/index.php", params);
+                JSONObject jsonObject = api.getJSONFromUrl("http://192.168.0.105:8888/iReporter/index.php", params);
+
+
                 try {
                     JSONArray resultArray = jsonObject.getJSONArray("result");
                     JSONObject result = resultArray.getJSONObject(0);
@@ -117,10 +123,39 @@ public class HomePageFragment extends android.app.Fragment {
         super.onDetach();
     }
 
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        super.onCreateOptionsMenu(menu, inflater);
-    }
+//    @Override
+//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+//        inflater.inflate(R.menu.home_page, menu);
+//        MenuItem searchItem = menu.findItem(R.id.action_search);
+//        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView)searchItem.getActionView();
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+//        searchView.setIconifiedByDefault(false);
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                Log.e("onQueryText Submit", query);
+//                System.out.println("search query submit");
+////                getActivity().onSearchRequested();
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                Log.e("OnQueryTextChange", newText);
+//                System.out.println("tap");
+//                return false;
+//            }
+//        });
+//         super.onCreateOptionsMenu(menu, inflater);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (item.getTitle().equals("Search")) {
+//            Log.d("onoptionsitemselected", "search is selected and on search requested method is called");
+//            getActivity().onSearchRequested();
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
 }

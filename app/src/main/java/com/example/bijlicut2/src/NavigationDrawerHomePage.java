@@ -4,20 +4,29 @@ import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import android.widget.SearchView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 import com.example.bijlicut2.R;
 
 public class NavigationDrawerHomePage extends FragmentActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+
+    SimpleCursorAdapter mCursorAdapter;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -42,6 +51,20 @@ public class NavigationDrawerHomePage extends FragmentActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+//        if(getIntent().getAction().equals(Intent.ACTION_VIEW)){
+//            Intent countryIntent = new Intent(this, CountryActivity.class);
+//            countryIntent.setData(getIntent().getData());
+//            startActivity(countryIntent);
+//            finish();
+//        }else
+//        final Intent intent = getIntent();
+//        final String action = intent.getAction();
+//        if (action!=null) {
+//            if(action.equals(Intent.ACTION_SEARCH)){ // If this activity is invoked, when user presses "Go" in the Keyboard of Search Dialog
+//                String query = intent.getStringExtra(SearchManager.QUERY);
+//            }
+//        }
     }
 
     @Override
@@ -50,8 +73,11 @@ public class NavigationDrawerHomePage extends FragmentActivity
         FragmentManager fragmentManager = getFragmentManager();
         if(position == 0) {
             fragmentManager.beginTransaction()
-                    .replace(R.id.container, HomePageFragment.newInstance("alksd"))
+                    .replace(R.id.container, HomePageFragment.newInstance("alksd"), "HomePageFragment")
                     .commit();
+//            fragmentManager.beginTransaction()
+//                    .replace(R.id.container, HomePageFragment.newInstance("alksd"))
+//                    .commit();
         }
     else {
         fragmentManager.beginTransaction()
@@ -81,18 +107,32 @@ public class NavigationDrawerHomePage extends FragmentActivity
         actionBar.setTitle(mTitle);
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        if (!mNavigationDrawerFragment.isDrawerOpen()) {
-            // Only show items in the action bar relevant to this screen
-            // if the drawer is not showing. Otherwise, let the drawer
-            // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.home_page, menu);
-            restoreActionBar();
-            return true;
-        }
-        return super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home_page, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView)searchItem.getActionView();
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Log.e("onQueryText Submit", query);
+                System.out.println("search query submit");
+//                getActivity().onSearchRequested();
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                Log.e("OnQueryTextChange", newText);
+                System.out.println("tap");
+                return false;
+            }
+        });
+        return true;
     }
 
     @Override
@@ -104,6 +144,11 @@ public class NavigationDrawerHomePage extends FragmentActivity
         if (id == R.id.action_settings) {
             return true;
         }
+        if (item.getTitle().equals("Search")) {
+            Log.d("onoptionsitemselected", "search is selected and on search requested method is called");
+            onSearchRequested();
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -149,3 +194,78 @@ public class NavigationDrawerHomePage extends FragmentActivity
         }
     }
 }
+
+//    @Override
+//    public boolean onSearchRequested() {
+//        Bundle appData = new Bundle();
+//        Log.e("search", "on search requested method is called");
+//        startSearch(null, false, appData, false);
+//        return true;
+//    }
+
+//    @Override
+//    protected void onNewIntent(Intent intent) {
+//        setIntent(intent);
+//        handleIntent(intent);
+//        super.onNewIntent(intent);
+//    }
+//
+//    private void handleIntent(Intent intent) {
+//        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+//            String query = intent.getStringExtra(SearchManager.QUERY);
+//            doSearch(query);
+//        }
+//        Log.d("handleIntent", "handle intent method is called");
+//    }
+//
+//    private void doMySearch(String query) {
+//        HomePageFragment homePageFragment = (HomePageFragment)getFragmentManager().findFragmentByTag("HomePageFragment");
+//        ListView suggestionList = (ListView)homePageFragment.getView().findViewById(R.id.suggestionList);
+//        ArrayList<String> suggestions = new ArrayList<String>(5);
+//        mCursorAdapter = new SimpleCursorAdapter(getBaseContext(),
+//                android.R.layout.simple_list_item_1,
+//                null,
+//                new String[] {SearchManager.SUGGEST_COLUMN_TEXT_1},
+//                new int[] { android.R.id.text1 },
+//                0
+//        );
+//        suggestionList.setAdapter(mCursorAdapter);
+//
+//        homePageFragment.query();
+//    }
+
+//    private void doSearch(String query) {
+//        HomePageFragment homePageFragment = (HomePageFragment)getFragmentManager().findFragmentByTag("HomePageFragment");
+//        ListView suggestionList = (ListView)homePageFragment.getView().findViewById(R.id.suggestionList);
+//        ArrayList<String> suggestions = new ArrayList<String>(5);
+//        mCursorAdapter = new SimpleCursorAdapter(getBaseContext(),
+//                android.R.layout.simple_list_item_1,
+//                null,
+//                new String[] {SearchManager.SUGGEST_COLUMN_TEXT_1},
+//                new int[] { android.R.id.text1 },
+//                0
+//        );
+//        suggestionList.setAdapter(mCursorAdapter);
+//
+//        Bundle data = new Bundle();
+//        data.putString("query", query);
+//
+//        // Invoking onCreateLoader() in non-ui thread
+//        getSupportLoaderManager().initLoader(1, data, this);
+//    }
+//
+//    @Override
+//    public android.support.v4.content.Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
+//        Uri uri = CountryContentProvider.CONTENT_URI;
+//        return new android.support.v4.content.CursorLoader(getBaseContext(),uri,null, null, new String[]{bundle.getString("query")}, null);
+//    }
+//
+//    @Override
+//    public void onLoadFinished(android.support.v4.content.Loader<Cursor> cursorLoader, Cursor cursor) {
+//        mCursorAdapter.swapCursor(cursor);
+//    }
+//
+//    @Override
+//    public void onLoaderReset(android.support.v4.content.Loader<Cursor> cursorLoader) {
+//
+//    }

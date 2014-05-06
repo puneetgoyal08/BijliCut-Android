@@ -60,7 +60,6 @@ public class MainActivityListFragment extends ListFragment {
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));
     }
 
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -77,7 +76,6 @@ public class MainActivityListFragment extends ListFragment {
         super.onDetach();
         mListener = null;
     }
-
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {

@@ -4,13 +4,73 @@
     <dataSet config="main" >
         <source path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res" >
             <file
+                name="afghanistan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/afghanistan.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="bangladesh"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/bangladesh.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="china"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/china.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="india"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/india.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="japan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/japan.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="nepal"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/nepal.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="nkorea"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/nkorea.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="pakistan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/pakistan.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="skorea"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/skorea.png"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="srilanka"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable/srilanka.png"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="action_search"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/action_search.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="afghanistan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/afghanistan.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="arrow_right"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/arrow_right.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="bangladesh"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/bangladesh.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -34,6 +94,11 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="china"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/china.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="drawer_shadow"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/drawer_shadow.9.png"
                 qualifiers="hdpi"
@@ -54,8 +119,18 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="india"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/india.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="info"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/info.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="japan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/japan.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -84,8 +159,23 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="nepal"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/nepal.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="neptune"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/neptune.jpg"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="nkorea"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/nkorea.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="pakistan"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/pakistan.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -101,6 +191,16 @@
             <file
                 name="signup"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/signup.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="skorea"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/skorea.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="srilanka"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/drawable-hdpi/srilanka.png"
                 qualifiers="hdpi"
                 type="drawable" />
             <file
@@ -159,6 +259,11 @@
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="activity_country"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_country.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="activity_main"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_main.xml"
                 qualifiers=""
@@ -166,6 +271,16 @@
             <file
                 name="activity_navigation_drawer_home_page"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_navigation_drawer_home_page.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_searchable"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_searchable.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_searcheable2"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_searcheable2.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -194,6 +309,11 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="fragment_searcheable"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/fragment_searcheable.xml"
+                qualifiers=""
+                type="layout" />
+            <file
                 name="layout_home_page_list_view"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/layout_home_page_list_view.xml"
                 qualifiers=""
@@ -211,6 +331,11 @@
             <file
                 name="main"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/menu/main.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="searcheable"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/menu/searcheable.xml"
                 qualifiers=""
                 type="menu" />
             <file
@@ -253,11 +378,15 @@
                 </string>
                 <string name="action_example" >Example action
                 </string>
+                <string name="flag_description" >flag_description
+                </string>
                 <string name="action_search" >Search
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
                 <string name="cutFromLabel" >Cut From
+                </string>
+                <string name="search_settings" >search_settings
                 </string>
                 <string name="navigation_drawer_open" >Open navigation drawer
                 </string>
@@ -275,9 +404,9 @@
                 </string>
                 <string name="bulb_on" >Bulb On
                 </string>
-                <string name="homepage_table_1" >How to use this app
-                </string>
                 <string name="app_name" >Navigation Drawer Example
+                </string>
+                <string name="homepage_table_1" >How to use this app
                 </string>
                 <string name="drawer_open" >Open navigation drawer
                 </string>
@@ -323,17 +452,17 @@ Neptune
                 </string>
                 <string name="title_activity_sign_up" >Sign Up
                 </string>
-                <string name="prompt_email" >Email
+                <string name="login_progress_signing_in" >Signing in…
                 </string>
                 <string name="action_sign_in_register" ><b>
 Sign in
                     </b> or register
                 </string>
-                <string name="login_progress_signing_in" >Signing in…
-                </string>
-                <string name="prompt_password" >Password
+                <string name="prompt_email" >Email
                 </string>
                 <string name="action_sign_in_short" >Sign in
+                </string>
+                <string name="prompt_password" >Password
                 </string>
                 <string name="error_incorrect_password" >This password is incorrect
                 </string>
@@ -405,25 +534,15 @@ wrap_content
                 </dimen>
             </file>
             <file
-                name="searcheable"
-                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/menu/searcheable.xml"
+                name="searchable"
+                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/xml/searchable.xml"
                 qualifiers=""
-                type="menu" />
-            <file
-                name="activity_searcheable"
-                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/activity_searcheable.xml"
-                qualifiers=""
-                type="layout" />
+                type="xml" />
             <file
                 name="searcheable"
                 path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/xml/searcheable.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="fragment_searcheable"
-                path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/layout/fragment_searcheable.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/build/res/rs/debug" />
     </dataSet>

@@ -55,5 +55,7 @@
     <string name="search_hint">Search</string>
     <string name="title_activity_searcheable">SearcheableActivity</string>
     <string name="hello_world">Hello world!</string>
+    <string name="flag_description">flag_description</string>
+    <string name="search_settings">search_settings</string>
 
 </resources>

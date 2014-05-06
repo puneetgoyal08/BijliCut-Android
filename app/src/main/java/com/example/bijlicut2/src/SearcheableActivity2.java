@@ -1,40 +1,43 @@
 package com.example.bijlicut2.src;
 
-import android.app.Fragment;
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 
 import com.example.bijlicut2.R;
 
-public class SearcheableActivity extends ListActivity {
+import java.util.ArrayList;
+
+public class SearcheableActivity2 extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.e("searcheable activity", "on create called");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_searcheable);
-        if (savedInstanceState == null) {
-            getFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
-
+        setContentView(R.layout.fragment_searcheable);
         Intent intent = getIntent();
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             doMySearch(query);
         }
+        final ArrayList<String> list = new ArrayList<String>();
+        list.add("one");
+        list.add("two");
+        ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, list);
+
+        this.setListAdapter(adapter);
     }
 
     public void doMySearch(String query) {
-
+        Log.e("searcheable activity", "doMySearch called");
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -56,24 +59,9 @@ public class SearcheableActivity extends ListActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_searcheable, container, false);
-            return rootView;
-        }
-    }
-
     @Override
-    public void setListAdapter(ListAdapter adapter) {
-        super.setListAdapter(adapter);
+    protected void onNewIntent(Intent intent) {
+        Log.e("onNew Intent", "is called");
+        super.onNewIntent(intent);
     }
 }
