@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
-    <eat-comment />
-
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
-    </string-array>
     <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
@@ -43,7 +30,7 @@
 
     <string name="action_websearch">Web search</string>
     <string name="app_label">App_Label</string>
-    <string name="app_name">Navigation Drawer Example</string>
+    <string name="app_name">Bijli Cut</string>
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="bulb_off">Bulb Off</string>
     <string name="bulb_on">Bulb On</string>
@@ -87,6 +74,7 @@
 
     <string name="search_hint">Search</string>
     <string name="search_settings">search_settings</string>
+    <string name="title_activity_detailed_info">DetailedInfoActivity</string>
     <string name="title_activity_home_page">HomePage</string>
     <string name="title_activity_searcheable">SearcheableActivity</string>
     <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings_activity_sign_up.xml -->
@@ -96,9 +84,11 @@
     <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">All Areas</string>
+    <string name="title_section3">Discounts</string>
+    <string name="title_section4">About</string>
+    <string name="title_section5">Preferences</string>
     <!-- From: file:/Users/pgoyal/AndroidStudioProjects/BijliCut2/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

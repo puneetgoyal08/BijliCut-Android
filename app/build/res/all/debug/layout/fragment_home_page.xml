@@ -73,7 +73,7 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:text="@string/detailedInfo"
-            android:id="@+id/button"
+            android:id="@+id/detailedInfo"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:background="@drawable/layout_detailed_info_background"

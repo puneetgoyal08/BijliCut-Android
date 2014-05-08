@@ -2,6 +2,7 @@ package com.example.bijlicut2.src;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -23,6 +25,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,22 +39,17 @@ import java.util.List;
 public class HomePageFragment extends android.app.Fragment {
     // TODO: Rename parameter arguments, choose names that match
 
+    private JSONObject jsonObject1;
+    private Button detailedInfo;
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
 
     private API api;
     private Thread myThread;
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @return A new instance of fragment HomePageFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+
+
     public static HomePageFragment newInstance(String param1) {
         HomePageFragment fragment = new HomePageFragment();
         fragment.setHasOptionsMenu(true);
@@ -80,16 +78,27 @@ public class HomePageFragment extends android.app.Fragment {
         params.add(new BasicNameValuePair("command", "stream"));
         final View v = inflater.inflate(R.layout.fragment_home_page, container, false);
 
+        detailedInfo = (Button)v.findViewById(R.id.detailedInfo);
+        detailedInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), DetailedInfoActivity.class);
+                intent.putExtra("result", jsonObject1.toString());
+                startActivity(intent);
+            }
+        });
+        detailedInfo.setEnabled(false);
+
         myThread = new Thread(new Runnable() {
             @Override
             public void run() {
 //                JSONObject jsonObject = api.getJSONFromUrl("http://10.0.2.2:8888/iReporter/index.php", params);
-//                JSONObject jsonObject = api.getJSONFromUrl("http://172.30.5.106:8888/iReporter/index.php", params);
-                JSONObject jsonObject = api.getJSONFromUrl("http://192.168.0.105:8888/iReporter/index.php", params);
-
+                final JSONObject jsonObject = api.getJSONFromUrl("http://172.30.5.106:8888/iReporter/index.php", params);
+//                final JSONObject jsonObject = api.getJSONFromUrl("http://192.168.0.105:8888/iReporter/index.php", params);
+                    jsonObject1 = jsonObject;
 
                 try {
-                    JSONArray resultArray = jsonObject.getJSONArray("result");
+                    final JSONArray resultArray = jsonObject.getJSONArray("result");
                     JSONObject result = resultArray.getJSONObject(0);
                     Log.d("result", result.toString());
                     final String cutTillObject = result.getString("cut_till");
@@ -97,6 +106,7 @@ public class HomePageFragment extends android.app.Fragment {
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
+                            detailedInfo.setEnabled(true);
                             TextView cutFromView;
                             cutFromView = (TextView)v.findViewById(R.id.cut_from);
                             cutFromView.setText(cutFromObject);
@@ -115,6 +125,7 @@ public class HomePageFragment extends android.app.Fragment {
 
         ListView listView = (ListView)v.findViewById(R.id.homePageList);
         listView.setAdapter(new HomePageListViewAdapter());
+        getActivity().setTitle("Home");
         return v;
     }
 
@@ -122,40 +133,4 @@ public class HomePageFragment extends android.app.Fragment {
     public void onDetach() {
         super.onDetach();
     }
-
-//    @Override
-//    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-//        inflater.inflate(R.menu.home_page, menu);
-//        MenuItem searchItem = menu.findItem(R.id.action_search);
-//        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
-//        SearchView searchView = (SearchView)searchItem.getActionView();
-//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
-//        searchView.setIconifiedByDefault(false);
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                Log.e("onQueryText Submit", query);
-//                System.out.println("search query submit");
-////                getActivity().onSearchRequested();
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                Log.e("OnQueryTextChange", newText);
-//                System.out.println("tap");
-//                return false;
-//            }
-//        });
-//         super.onCreateOptionsMenu(menu, inflater);
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        if (item.getTitle().equals("Search")) {
-//            Log.d("onoptionsitemselected", "search is selected and on search requested method is called");
-//            getActivity().onSearchRequested();
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 }
